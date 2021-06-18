@@ -104,10 +104,16 @@
       <label for="floatingPassword">Password</label>
     </div>
 
+  <script>
+      function logoutLocal() {
+        localStorage.setItem("loginStatus", "logged-out");
+        
+      }
+  </script>
     
     <!--<button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>-->
         <!-- Button trigger modal -->
-<button type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button onclick="logoutLocal()" type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Logout
 </button>
 

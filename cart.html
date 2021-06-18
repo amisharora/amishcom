@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../css/carousel.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -18,9 +18,9 @@
           {
             "page":
             {
-              "pageName":"amishcom:login",
-              "pageType":"login page",
-              "siteSection":"amishcom:user:login"
+              "pageName":"amishcom:cart",
+              "pageType":"cart page",
+              "siteSection":"amishcom:purchase:cart"
             }
           }
         })          
@@ -44,7 +44,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="login.css" rel="stylesheet">
+    <link href="user/login.css" rel="stylesheet">
   </head>
   <body class="text-center">
     <!-- NAVBAR START -->
@@ -65,17 +65,17 @@
                   Products
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="../category1/product1.html">Product 1</a></li>
-                  <li><a class="dropdown-item" href="../category1/product2.html">Product 2</a></li>
-                  <li><a class="dropdown-item" href="../category1/product3.html">Product 3</a></li>
-                  <li><a class="dropdown-item" href="../category2/product4.html">Product 4</a></li>
+                  <li><a class="dropdown-item" href="category1/product1.html">Product 1</a></li>
+                  <li><a class="dropdown-item" href="category1/product2.html">Product 2</a></li>
+                  <li><a class="dropdown-item" href="category1/product3.html">Product 3</a></li>
+                  <li><a class="dropdown-item" href="category2/product4.html">Product 4</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="../category1.html">Category 1</a></li>
-                  <li><a class="dropdown-item" href="../category2.html">Category 2</a></li>
+                  <li><a class="dropdown-item" href="category1.html">Category 1</a></li>
+                  <li><a class="dropdown-item" href="category2.html">Category 2</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="cart.html">Cart</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../checkout.html">Checkout</a>
@@ -91,53 +91,31 @@
       </nav>
     </header>
   <!-- NAVBAR ENDS -->
-    
-<main class="form-signin">
-  <form>
-    <h1 class="h3 mb-3 fw-normal">Login Page</h1>
-
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" value="amish@example.com" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" value="password123" placeholder="Password">
-      <label for="floatingPassword">Password</label>
-    </div>
-    <script>
-      function loginLocal() {
-        localStorage.setItem("loginStatus", "logged-in");
-        
-      }
-      </script>
-    <!--<button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>-->
-        <!-- Button trigger modal -->
-<button onclick="loginLocal()" type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
- Login
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Login status</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Login Successful
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a href="../index.html"><button type="button" class="btn btn-primary">Back to Home</button></a>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1></h1>
       </div>
     </div>
+    <div class="row">
+        <div class="col">
+          <h3 id="cartInput1">You have below item(s) in cart :</h3>
+          <h4 id="cartInput2"></h6>
+        </div>
+      </div>
   </div>
-</div>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-  </form>
-</main>
 
+  <script>
+            
+    var cart = localStorage.getItem("cart");
+    if (cart=="" || !cart){
+      document.getElementById("cartInput1").innerHTML = "Cart is empty";
+    }else{
+      document.getElementById("cartInput2").innerHTML = cart;
+    }
+  
+  </script>
+  
 
     
   </body>

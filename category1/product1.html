@@ -20,7 +20,13 @@
               "pageName":"amishcom:product 1",
               "pageType":"product detail page",
               "siteSection":"amishcom:product:category 1:product 1"
+            },
+            "product":[
+            {
+              "category":"category1",
+              "name":"product1"
             }
+            ]
           }
         })          
     </script>
@@ -55,6 +61,9 @@
             </ul>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="../cart.html">Cart</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="../checkout.html">Checkout</a>
           </li>
         </ul>
@@ -80,15 +89,55 @@
         <hr class="featurette-divider">
           
         <div class="row featurette">
-          <div class="col-md-7">
+          <div class="col-md-4">
             <h2 class="featurette-heading">Product 1. <span class="text-muted">It’ll blow your mind.</span></h2>
             <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-2">
+            <button onclick="cartLocal()" type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Add to Cart
+             </button>
+          </div>
+          <div class="col-md-3">
+            <button onclick="cartRemoveLocal()" type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Remove from Cart
+             </button>
+          </div>
+          <div class="col-md-3">
             <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
     
           </div>
+          
         </div>
+
+        <script>
+          function cartLocal() {
+            localStorage.setItem("cart", "Product 1");
+            
+          }
+          function cartRemoveLocal() {
+            localStorage.removeItem("cart");
+          }
+      </script>
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart Status</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Cart has been updated
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="../index.html"><button type="button" class="btn btn-primary">Back to Home</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal ENDS -->
     
         <hr class="featurette-divider">
       </div><!-- /.container -->
