@@ -10,7 +10,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script></body>
-
+    <script>
+      var adobeDataLayer = adobeDataLayer || [];
+      adobeDataLayer.push(
+        {
+          "data":
+          {
+            "page":
+            {
+              "pageName":"amishcom:logout",
+              "pageType":"logout page",
+              "siteSection":"amishcom:user:logout"
+            }
+          }
+        })          
+    </script>
+    <script src="//assets.adobedtm.com/844a20746c8c/34740f4a7ff2/launch-9a8693ded9ad-development.min.js" async></script>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -50,22 +65,20 @@
                   Products
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="category1/product1.html">Product 1</a></li>
-                  <li><a class="dropdown-item" href="category1/product2.html">Product 2</a></li>
-                  <li><a class="dropdown-item" href="category1/product3.html">Product 3</a></li>
-                  <li><a class="dropdown-item" href="category2/product4.html">Product 4</a></li>
+                  <li><a class="dropdown-item" href="../category1/product1.html">Product 1</a></li>
+                  <li><a class="dropdown-item" href="../category1/product2.html">Product 2</a></li>
+                  <li><a class="dropdown-item" href="../category1/product3.html">Product 3</a></li>
+                  <li><a class="dropdown-item" href="../category2/product4.html">Product 4</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="category1.html">Category 1</a></li>
-                  <li><a class="dropdown-item" href="category2.html">Category 2</a></li>
+                  <li><a class="dropdown-item" href="../category1.html">Category 1</a></li>
+                  <li><a class="dropdown-item" href="../category2.html">Category 2</a></li>
                 </ul>
               </li>
               
               <li class="nav-item">
                 <a class="nav-link" href="../checkout.html">Checkout</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="test.html">Test</a>
-              </li>
+              
             </ul>
             
             <form class="d-flex">
