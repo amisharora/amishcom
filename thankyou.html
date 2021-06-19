@@ -94,12 +94,18 @@
   <!-- NAVBAR ENDS -->
     
 <main class="form-signin">
-  <form>
-    <h1 class="h3 mb-3 fw-normal">Thank you for shopping</h1>
-
+  
+    <h1 id="purchaseText" class="h3 mb-3 fw-normal"></h1>
+    <button onclick="purchase()">Click to Fire Purchase call</button>
   
 
-  </form>
+  
+  <script>
+    function purchase(){
+      adobeDataLayer.push({"event":"purchase"});
+      document.getElementById("purchaseText").innerHTML="Thank you for shopping";
+    }
+  </script>
 </main>
 
 

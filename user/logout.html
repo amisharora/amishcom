@@ -107,7 +107,7 @@
   <script>
       function logoutLocal() {
         localStorage.setItem("loginStatus", "logged-out");
-        
+        adobeDataLayer.push({"event":"logout"})
       }
   </script>
     

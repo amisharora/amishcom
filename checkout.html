@@ -300,10 +300,16 @@
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg"><a class="w-100 btn btn-primary btn-lg" href="thankyou.html"> Continue to checkout</a></button>
+          <button onclick="checkout()" class="w-100 btn btn-primary btn-lg"><a class="w-100 btn btn-primary btn-lg" href="thankyou.html"> Continue to checkout</a></button>
         </form>
       </div>
     </div>
+    <script>
+      
+      function checkout() {
+        adobeDataLayer.push({"event":"checkout"})
+      }
+  </script>
   </main>
 
   <footer class="my-5 pt-5 text-muted text-center text-small">

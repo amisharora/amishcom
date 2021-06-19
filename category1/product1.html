@@ -94,12 +94,12 @@
             <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
           </div>
           <div class="col-md-2">
-            <button onclick="cartLocal()" type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button id="cartAdd" onclick="cartLocal()" type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Add to Cart
              </button>
           </div>
           <div class="col-md-3">
-            <button onclick="cartRemoveLocal()" type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button id="cartRemove" onclick="cartRemoveLocal()" type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Remove from Cart
              </button>
           </div>
@@ -113,10 +113,11 @@
         <script>
           function cartLocal() {
             localStorage.setItem("cart", "Product 1");
-            
+            adobeDataLayer.push({"event":"cartAdd"})
           }
           function cartRemoveLocal() {
             localStorage.removeItem("cart");
+            adobeDataLayer.push({"event":"cartRemove"})
           }
       </script>
         <!-- Modal -->

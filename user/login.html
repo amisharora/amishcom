@@ -107,6 +107,7 @@
     <script>
       function loginLocal() {
         localStorage.setItem("loginStatus", "logged-in");
+        adobeDataLayer.push({"event":"login"})
         
       }
       </script>
