@@ -38,7 +38,7 @@ try{
         Array.prototype.sample = function(){
             return this[Math.floor(Math.random()*this.length)];
         }
-        localStorage.setItem("membershipStatus",["Gold", "Silver"].sample());  
+        localStorage.setItem("membershipStatus",["Gold", "Silver","Bronze"].sample());  
     }
     
     var adobeDataLayer = adobeDataLayer || [];
