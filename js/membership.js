@@ -56,7 +56,7 @@ try{
 //MEMBERSHIP STATUS CODE ENDS
 
 //CROSS DOMAIN PLUGIN
-var internalLinkArray = ["vivek-poc.web.app","poc.web.app", "pseudodomain2.com"];
+var internalLinkArray = ["vivek-poc.web.app","poc.web.app", "127.0.0.1"];
 var primaryDomain = "127.0.0.1:5500";
 
 
