@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="/at-1.8.js"></script>
+<script>
+function custClick(){
+adobe.target.trackEvent({
+"mbox": "crossDomainTracking"
+})
+}
+</script>
+</head>
+
+<body>
+
+
+
+<h1>The button Element</h1>
+
+
+
+<button type="button" onclick="custClick()">Click Me!</button>
+
+
+
+</body>
+
+</html>
